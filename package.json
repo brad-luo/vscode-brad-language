@@ -4,13 +4,16 @@
   "displayName": "brad language",
   "description": "A brad language plugin for highlighting and snippets completetion",
   "version": "0.0.1",
-  "engines": {
-    "vscode": "^1.62.0"
-  },
+  "main": "./out/extension.js",
+  "homepage": "https://github.com/brad-luo/vscode-brad-language",
   "icon": "images/icon.png",
+
   "repository": {
     "type": "git",
-    "url": "https://test.com"
+    "url": "https://github.com/brad-luo/vscode-brad-language"
+  },
+  "engines": {
+    "vscode": "^1.62.0"
   },
   "categories": [
     "Snippets",
@@ -20,7 +23,6 @@
     "onCommand:test.helloWorld",
     "onCommand:test.showSelectionCount"
   ],
-  "main": "./out/extension.js",
   "contributes": {
     "languages": [
       {

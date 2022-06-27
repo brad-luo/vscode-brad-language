@@ -20,10 +20,22 @@
     "Programming Languages"
   ],
   "activationEvents": [
-    "onCommand:test.helloWorld",
-    "onCommand:test.showSelectionCount"
+    "onCommand:test.webView",
+    "onCommand:test.showSelectionCount",
+    "onCustomEditor:editorCustom.brad"
   ],
   "contributes": {
+    "customEditors": [
+			{
+				"viewType": "editorCustom.brad",
+				"displayName": "Cat Scratch",
+				"selector": [
+					{
+						"filenamePattern": "*.brad"
+					}
+				]
+			}
+    ],
     "languages": [
       {
         "id": "brad.language",
@@ -49,12 +61,12 @@
       }
     ],
     "configuration": {
-      "title": "Brad Test"
+      "title": "Brad language"
     },
     "commands": [
       {
-        "command": "test.helloWorld",
-        "title": "print"
+        "command": "test.webView",
+        "title": "brad webview"
       },
       {
         "command": "test.showSelectionCount",
@@ -63,7 +75,7 @@
     ],
     "keybindings": [
       {
-        "command": "test.helloWorld",
+        "command": "test.webView",
         "key": "ctrl+f1",
         "mac": "cmd+f1",
         "when": "editorTextFocus"
@@ -72,7 +84,7 @@
     "menus": {
       "commandPalette": [
         {
-          "command": "test.helloWorld",
+          "command": "test.webView",
           "when": "!editor.readOnly"
         }
       ]
